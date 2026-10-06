@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sutro Pacific | Preview</title>
+<!-- Static preview of the Next.js site. Open this file directly in a browser. The Next.js app in /app is the source of truth. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+if (window.tailwind) tailwind.config = { theme: { extend: {
+  colors: { ink:'#0b1f33', sand:'#f6f1e9', pacific:{50:'#eef7f8',100:'#d5ecef',500:'#1f8a99',600:'#17707d',700:'#125a65',900:'#0b3640'} },
+  fontFamily: { sans:['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<style>
+  html{scroll-behavior:smooth} body{color:#0b1f33}
+  .page{display:none} .page.active{display:block}
+  .prose-legal h2{margin-top:2.5rem;margin-bottom:.75rem;font-size:1.25rem;font-weight:600}
+  .prose-legal h3{margin-top:1.5rem;margin-bottom:.5rem;font-weight:600}
+  .prose-legal p,.prose-legal li{line-height:1.75;color:#334155}
+  .prose-legal p{margin-bottom:1rem}
+  .prose-legal ul{list-style:disc;padding-left:1.5rem;margin-bottom:1rem}
+  .prose-legal li{margin-bottom:.35rem}
+  .prose-legal a{color:#17707d;text-decoration:underline}
+  .preview-bar{font-size:12px}
+</style>
+</head>
+<body class="font-sans antialiased bg-white">
+
+<div class="preview-bar bg-amber-100 text-amber-900 text-center py-1">Preview build · placeholder domain and emails · legal text is a draft pending attorney review</div>
+
+<header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+  <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
+    <a href="#/" class="inline-flex items-center gap-2 font-semibold tracking-tight text-ink">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#17707d"/><path d="M5 18c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M5 12c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-opacity=".6" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+      <span>Sutro Pacific</span>
+    </a>
+    <nav class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
+      <a href="#/" class="hover:text-ink">Home</a>
+      <a href="#/sms" class="hover:text-ink">SMS Program</a>
+      <a href="#/contact" class="hover:text-ink">Contact</a>
+      <a href="mailto:hello@sutropacific.com?subject=Sutro%20Pacific%20demo%20request" class="rounded-full bg-pacific-600 px-4 py-2 text-white hover:bg-pacific-700">Request a demo</a>
+    </nav>
+    <details class="relative md:hidden">
+      <summary class="cursor-pointer list-none rounded-md px-3 py-2 text-sm font-medium text-slate-700 ring-1 ring-slate-200">Menu</summary>
+      <div class="absolute right-0 mt-2 w-48 rounded-xl border border-slate-200 bg-white p-2 shadow-lg">
+        <a href="#/" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-50">Home</a>
+        <a href="#/sms" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-50">SMS Program</a>
+        <a href="#/contact" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-50">Contact</a>
+        <a href="#/privacy" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-50">Privacy Policy</a>
+        <a href="#/terms" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-50">Terms</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<main>
+<!-- ======================= HOME ======================= -->
+<section id="page-home" class="page">
+  <div class="bg-gradient-to-b from-pacific-50 to-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid items-center gap-12 py-16 md:py-24 lg:grid-cols-2">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wider text-pacific-600">For multifamily property teams</p>
+        <h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">Your property team, kept on track by text.</h1>
+        <p class="mt-5 text-lg text-slate-600">Sutro Pacific's AI agents coordinate work orders and unit turns with your team over SMS. Work keeps moving, nothing slips through the cracks, and you always know where things stand.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="mailto:hello@sutropacific.com?subject=Sutro%20Pacific%20demo%20request" class="rounded-full bg-pacific-600 px-6 py-3 text-sm font-semibold text-white hover:bg-pacific-700">Request a demo</a>
+          <a href="#how" onclick="document.getElementById('how').scrollIntoView();return false;" class="rounded-full px-6 py-3 text-sm font-semibold ring-1 ring-slate-300 hover:bg-white">See how it works</a>
+        </div>
+        <p class="mt-6 text-sm text-slate-500">Built for owners and managers of 10 to 200+ units.</p>
+      </div>
+      <div data-phone="workorder" data-title="Sutro · Strive Inc."></div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="max-w-3xl text-3xl font-semibold tracking-tight">Small teams don't lack effort. They lack someone keeping the tempo.</h2>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="rounded-2xl border border-slate-200 p-6"><h3 class="text-lg font-semibold">Visibility</h3><p class="mt-2 text-slate-600">Know which work orders, turns and follow-ups are open, who owns them and what's blocking them, without chasing anyone.</p></div>
+      <div class="rounded-2xl border border-slate-200 p-6"><h3 class="text-lg font-semibold">Tempo</h3><p class="mt-2 text-slate-600">Multi-step jobs stall between handoffs. The agent keeps every step moving, so vacant days and repeat calls go down.</p></div>
+      <div class="rounded-2xl border border-slate-200 p-6"><h3 class="text-lg font-semibold">Accountability</h3><p class="mt-2 text-slate-600">Every request, reply, photo and approval is logged in one timeline, so nothing depends on memory.</p></div>
+    </div>
+  </div>
+
+  <div id="how" class="bg-sand">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+      <h2 class="text-3xl font-semibold tracking-tight">How it works</h2>
+      <ol class="mt-10 grid gap-6 md:grid-cols-4">
+        <li class="rounded-2xl bg-white p-6 shadow-sm"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-pacific-600 text-sm font-semibold text-white">1</span><h3 class="mt-4 font-semibold">Start a mission</h3><p class="mt-2 text-sm text-slate-600">Create a work order or unit turn in the dashboard in under a minute.</p></li>
+        <li class="rounded-2xl bg-white p-6 shadow-sm"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-pacific-600 text-sm font-semibold text-white">2</span><h3 class="mt-4 font-semibold">The agent texts your team</h3><p class="mt-2 text-sm text-slate-600">The right maintenance tech, leasing agent or vendor gets a clear request by text. No app to install.</p></li>
+        <li class="rounded-2xl bg-white p-6 shadow-sm"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-pacific-600 text-sm font-semibold text-white">3</span><h3 class="mt-4 font-semibold">It follows up, so you don't have to</h3><p class="mt-2 text-sm text-slate-600">Check-ins, photos, spending approvals and reminders, only during each person's work hours.</p></li>
+        <li class="rounded-2xl bg-white p-6 shadow-sm"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-pacific-600 text-sm font-semibold text-white">4</span><h3 class="mt-4 font-semibold">You get the full picture</h3><p class="mt-2 text-sm text-slate-600">A timeline of every step and an email report when the mission closes.</p></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl font-semibold tracking-tight">Meet the agents</h2>
+    <p class="mt-3 max-w-2xl text-slate-600">Each agent runs missions from proven playbooks and texts from its own number, so your team always knows who's asking.</p>
+    <div id="agents" class="mt-10 grid gap-6 md:grid-cols-2"></div>
+  </div>
+
+  <div class="bg-pacific-900 text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+      <h2 class="text-3xl font-semibold tracking-tight">Respectful by design</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-4">
+        <div><h3 class="font-semibold">Only people who opt in</h3><p class="mt-2 text-sm text-pacific-100">Team members and vendors confirm by text before the agent ever messages them, and can reply STOP at any time.</p></div>
+        <div><h3 class="font-semibold">Only during work hours</h3><p class="mt-2 text-sm text-pacific-100">Routine texts arrive only inside each person's schedule. Only true emergencies go out after hours, and only to people who agreed.</p></div>
+        <div><h3 class="font-semibold">Residents are never texted</h3><p class="mt-2 text-sm text-pacific-100">The agents coordinate your team. Your residents' contact information is never used to message them.</p></div>
+        <div><h3 class="font-semibold">You keep the decisions</h3><p class="mt-2 text-sm text-pacific-100">Spending limits and approvals come from your settings. The agent asks; you decide.</p></div>
+      </div>
+      <p class="mt-10 text-sm text-pacific-100">Read how our texting program works on the <a href="#/sms" class="underline">SMS Program page</a>.</p>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid gap-10 py-16 lg:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-semibold tracking-tight">Simple pricing</h2>
+      <p class="mt-4 text-lg text-slate-600"><span class="font-semibold text-ink">$100/month</span> plus <span class="font-semibold text-ink">$4 per unit</span> under management.</p>
+      <ul class="mt-6 space-y-2 text-slate-600"><li>Every agent included as it becomes available</li><li>Unlimited missions across all of your properties</li><li>Mission reports by email and a full timeline in the dashboard</li></ul>
+      <a href="mailto:hello@sutropacific.com?subject=Sutro%20Pacific%20demo%20request" class="mt-8 inline-block rounded-full bg-pacific-600 px-6 py-3 text-sm font-semibold text-white hover:bg-pacific-700">Request a demo</a>
+    </div>
+    <div class="overflow-hidden rounded-2xl border border-slate-200">
+      <table class="w-full text-left text-sm"><thead class="bg-slate-50 text-slate-600"><tr><th class="px-5 py-3 font-medium">Units under management</th><th class="px-5 py-3 font-medium">Monthly price</th></tr></thead>
+      <tbody id="pricing" class="divide-y divide-slate-200"></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SMS PROGRAM ======================= -->
+<section id="page-sms" class="page">
+  <div class="border-b border-slate-200 bg-pacific-50"><div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14">
+    <p class="text-sm font-semibold uppercase tracking-wider text-pacific-600">SMS Program</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">SMS Program &amp; Opt-In</h1>
+    <p class="mt-4 max-w-3xl text-lg text-slate-600">How the Sutro Pacific Team Assistant texting program works, who receives messages, how people opt in, and how to stop messages at any time.</p>
+  </div></div>
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid gap-12 py-14 lg:grid-cols-[1fr_380px]">
+    <div class="prose-legal">
+      <h2>Program overview</h2>
+      <p>The Sutro Pacific Team Assistant is an operational text messaging program run by Sutro Pacific, a service of O Three Verve LLC. Property management companies ("client companies") use Sutro Pacific to coordinate work with their own staff and vendors. Each message identifies the agent (for example, "Sutro") and the client company it is sending for (for example, "the team assistant for Strive Inc.").</p>
+      <ul>
+        <li><strong>Who receives messages:</strong> employees and vendors of client companies who have agreed to receive operational texts about their work.</li>
+        <li><strong>Who does not:</strong> residents, prospects and the general public. We never text residents, and the program is never used for marketing.</li>
+        <li><strong>What the messages are about:</strong> work orders, unit turns and related tasks, such as new job requests, status check-ins, requests for photos, spending approvals and completion notices.</li>
+      </ul>
+      <h2>How team members opt in</h2>
+      <ul>
+        <li><strong>Step 1. The employer confirms consent.</strong> An administrator at the client company adds the team member or vendor in the Sutro Pacific dashboard and confirms that the person has agreed to receive operational text messages from the program.</li>
+        <li><strong>Step 2. A welcome text explains the program.</strong> The person receives one welcome message that names the client company, describes the messages, states that message frequency varies and that message and data rates may apply, and explains how to get help or opt out.</li>
+        <li><strong>Step 3. The person confirms by replying YES.</strong> No other messages are sent until the person replies YES (or START). If there is no reply, we send at most one reminder, then stop.</li>
+      </ul>
+      <p><strong>Consent is voluntary.</strong> Agreeing to receive texts is not a condition of employment or of working with any client company. A person who opts out is never pressured through the program, and their employer is told to coordinate with them another way.</p>
+      <h2>Message frequency</h2>
+      <p>Message frequency varies with the amount of work assigned to you, typically a few messages per assigned task. Routine messages are sent only during your scheduled work hours and never before 8:00 AM or after 8:00 PM in your local time. People who have separately agreed to be emergency contacts may receive messages at other times about urgent issues such as active leaks.</p>
+      <h2>Message and data rates</h2>
+      <p>Message and data rates may apply, depending on your mobile plan.</p>
+      <h2>How to opt out</h2>
+      <p>Reply <strong>STOP</strong> to any message to stop receiving texts. You can also reply STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT, REVOKE or OPT OUT, or simply tell us in your own words that you want the texts to stop. You will receive one confirmation message, and no further messages will be sent. Opting out of one agent stops messages from all Sutro Pacific agents for that client company. Reply <strong>START</strong> to resume.</p>
+      <h2>How to get help</h2>
+      <p>Reply <strong>HELP</strong> to any message, or email <a href="mailto:support@sutropacific.com">support@sutropacific.com</a>.</p>
+      <h2>Privacy</h2>
+      <p>We do not sell, rent or share mobile phone numbers or text messaging opt-in data and consent with third parties or affiliates for their marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties. See our <a href="#/privacy">Privacy Policy</a> and <a href="#/terms">Terms &amp; Conditions</a> for full details.</p>
+      <h2>Carriers</h2>
+      <p>Mobile carriers are not liable for delayed or undelivered messages.</p>
+    </div>
+    <aside class="space-y-6 lg:sticky lg:top-24 lg:self-start">
+      <p class="text-sm font-semibold text-slate-600">What opting in looks like</p>
+      <div data-phone="optin" data-title="Sutro · Strive Inc."></div>
+      <p class="text-xs text-slate-500">Example only. "Strive Inc." and the people shown are fictional. Real messages name the client company you work with.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ======================= PRIVACY ======================= -->
+<section id="page-privacy" class="page">
+  <div class="border-b border-slate-200 bg-pacific-50"><div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14">
+    <p class="text-sm font-semibold uppercase tracking-wider text-pacific-600">Legal</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Privacy Policy</h1>
+    <p class="mt-4 text-lg text-slate-600">Effective October 6, 2026</p>
+  </div></div>
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 prose-legal">
+    <p>This Privacy Policy explains how O Three Verve LLC, doing business as Sutro Pacific ("Sutro Pacific," "we," "us"), collects, uses, shares and protects information through our website at sutropacific.com, our dashboard, and our text messaging program, the Sutro Pacific Team Assistant (together, the "Service").</p>
+    <h2>1. Who this policy covers</h2>
+    <ul><li><strong>Client companies</strong> that subscribe to the Service, and their administrators who use the dashboard.</li><li><strong>Team members and vendors</strong> of client companies who receive text messages from our agents.</li><li><strong>Website visitors</strong> and people who contact us.</li></ul>
+    <p>When a client company gives us information about its own team, properties or residents, we process that information on the client company's behalf and under its instructions, as its service provider.</p>
+    <h2>2. Information we collect</h2>
+    <ul>
+      <li><strong>Account and business information:</strong> company name, business address, administrator names, email addresses, phone numbers and billing details.</li>
+      <li><strong>Team member and vendor information</strong> provided by client companies: name, mobile phone number, email address, role, the properties they work on, work schedule and time zone.</li>
+      <li><strong>Text message content:</strong> messages, photos and other attachments exchanged with our agents, with dates, times and delivery status.</li>
+      <li><strong>Consent records:</strong> when and how a person opted in to or out of text messages.</li>
+      <li><strong>Property information</strong> provided by client companies: property and unit details, work order details and, where needed, resident names associated with a unit. We never use resident information to contact residents.</li>
+      <li><strong>Website and usage information:</strong> basic technical data such as browser type, pages visited and IP address, collected through standard server logs and essential cookies.</li>
+    </ul>
+    <h2>3. How we use information</h2>
+    <ul><li>To provide the Service: sending and receiving operational text messages, coordinating tasks, recording progress and producing reports for client companies.</li><li>To honor consent choices, including opt-outs, and to keep records of them.</li><li>To provide support, maintain security, prevent misuse, and improve the Service.</li><li>To bill client companies and communicate with them about their accounts.</li><li>To comply with legal obligations.</li></ul>
+    <p>We do not use text messaging information for marketing, and we do not sell personal information.</p>
+    <h2>4. Automated processing</h2>
+    <p>Our agents use artificial intelligence services to understand replies to text messages and to word the messages they send. These providers process message content only to deliver the Service to us, under agreements that do not permit them to use it to train their models or for their own purposes. Decisions such as spending approvals are made by people at the client company, not by our agents.</p>
+    <h2>5. How we share information</h2>
+    <p>We share information only as needed to run the Service:</p>
+    <ul><li><strong>With the client company</strong> the information relates to (for example, a work order's message history and photos).</li><li><strong>With service providers</strong> who process information on our behalf, such as our text messaging provider, cloud hosting and database providers, artificial intelligence providers, email delivery provider and payment processor. They may use the information only to provide services to us.</li><li><strong>For legal reasons</strong>, when required by law or to protect rights, safety and security.</li><li><strong>In a business transfer</strong>, such as a merger or acquisition, subject to this policy.</li></ul>
+    <p><strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information won't be shared with any third parties.</strong></p>
+    <h2>6. Text messaging</h2>
+    <p>Our agents text only people who have opted in, and only about their work for a client company. You can reply STOP to any message to opt out, or HELP for help. Message frequency varies, and message and data rates may apply. See our <a href="#/sms">SMS Program page</a> and <a href="#/terms">Terms &amp; Conditions</a>.</p>
+    <h2>7. Data retention</h2>
+    <p>We keep message content and attachments for as long as the client company's account is active and for up to 24 months after a task closes, unless the client company sets a different period or the law requires otherwise. We keep consent and opt-out records for at least four years so we can show that we honored them. When information is no longer needed, we delete or de-identify it.</p>
+    <h2>8. Security</h2>
+    <p>We use administrative, technical and physical safeguards, including encryption in transit and at rest, access controls that separate each client company's data, and audit logs. No system is perfectly secure, but we work to protect the information we handle.</p>
+    <h2>9. Your choices and rights</h2>
+    <ul><li><strong>Text messages:</strong> reply STOP to opt out at any time, or START to resume.</li><li><strong>Access, correction and deletion:</strong> you may ask to see, correct or delete your personal information. If your information was provided by a client company, we may refer your request to that company and act on its instructions.</li><li><strong>California residents:</strong> depending on the circumstances, California law may give you rights to know, delete and correct personal information, to limit the use of sensitive personal information, and not to be discriminated against for exercising these rights. We do not sell or share personal information for cross-context behavioral advertising.</li></ul>
+    <p>To make a request, email <a href="mailto:privacy@sutropacific.com">privacy@sutropacific.com</a>. We will verify your request before acting on it.</p>
+    <h2>10. Children</h2>
+    <p>The Service is intended for businesses and is not directed to anyone under 18. We do not knowingly collect information from children.</p>
+    <h2>11. Changes to this policy</h2>
+    <p>We may update this policy from time to time. We will post the updated version here with a new effective date and, for material changes, notify client companies.</p>
+    <h2>12. Contact us</h2>
+    <p>O Three Verve LLC (dba Sutro Pacific)<br>606 Lake Street, San Francisco, CA 94118<br><a href="mailto:privacy@sutropacific.com">privacy@sutropacific.com</a></p>
+  </div>
+</section>
+
+<!-- ======================= TERMS ======================= -->
+<section id="page-terms" class="page">
+  <div class="border-b border-slate-200 bg-pacific-50"><div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14">
+    <p class="text-sm font-semibold uppercase tracking-wider text-pacific-600">Legal</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Terms &amp; Conditions</h1>
+    <p class="mt-4 text-lg text-slate-600">Effective October 6, 2026</p>
+  </div></div>
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 prose-legal">
+    <p>These Terms &amp; Conditions are provided by O Three Verve LLC, doing business as Sutro Pacific ("Sutro Pacific," "we," "us"). Part A applies to anyone who receives text messages from our program. Part B applies to companies that subscribe to the Service.</p>
+    <h2>Part A. SMS Terms</h2>
+    <h3>1. Program description</h3><p>The Sutro Pacific Team Assistant sends operational text messages to employees and vendors of property management companies that use Sutro Pacific ("client companies"). Messages are about assigned work, such as work orders and unit turns: new requests, status check-ins, requests for photos, approvals and completion notices. The program is not used for marketing.</p>
+    <h3>2. Opting in</h3><p>You join the program when a client company you work with confirms that you agreed to receive these messages and you reply YES (or START) to our welcome message. Consent is not a condition of employment or of doing business with any client company.</p>
+    <h3>3. Message frequency and cost</h3><p>Message frequency varies based on the work assigned to you. Message and data rates may apply. Routine messages are sent only during your scheduled work hours and never before 8:00 AM or after 8:00 PM local time, except urgent messages to people who have agreed to be emergency contacts.</p>
+    <h3>4. Opting out</h3><p>Reply STOP to any message to opt out. You may also reply STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT, REVOKE or OPT OUT, or tell us in your own words. You will receive one confirmation, and then no further messages. Opting out applies to all Sutro Pacific agents for that client company. Reply START to rejoin.</p>
+    <h3>5. Help</h3><p>Reply HELP to any message, or contact <a href="mailto:support@sutropacific.com">support@sutropacific.com</a>.</p>
+    <h3>6. Carriers and delivery</h3><p>Mobile carriers are not liable for delayed or undelivered messages. Delivery depends on your carrier and device and is not guaranteed.</p>
+    <h3>7. Privacy</h3><p>Our <a href="#/privacy">Privacy Policy</a> explains how we handle your information. We do not share text messaging opt-in data or consent with third parties, and we do not share mobile information with third parties or affiliates for marketing or promotional purposes.</p>
+    <h3>8. Eligibility</h3><p>You must be at least 18 years old and the account holder or authorized user of the mobile number you provide.</p>
+    <h2>Part B. Terms of Service for client companies</h2>
+    <h3>9. The Service</h3><p>Sutro Pacific provides software, including AI agents, that coordinates tasks with a client company's team by text message and records progress in a dashboard. We may improve or change the Service over time. Some agents may be in development or offered as previews.</p>
+    <h3>10. Accounts</h3><p>You are responsible for your administrators' activity and for keeping login credentials secure. Information you provide must be accurate, including business details used to register your messaging numbers with carriers.</p>
+    <h3>11. Your messaging responsibilities</h3>
+    <ul><li>Add only team members and vendors who have agreed to receive operational text messages, and keep their contact details and work schedules accurate.</li><li>Do not make consent a condition of employment, and coordinate another way with anyone who opts out.</li><li>Do not use the Service to message residents, prospects or the public, or to send marketing.</li><li>Set spending limits, approvers and other policies in the dashboard. The agents follow these settings; they do not make spending or business decisions for you.</li><li>Comply with laws that apply to your business, including employment, privacy and fair housing laws.</li></ul>
+    <h3>12. Fees</h3><p>Subscription fees are $100 per month plus $4 per unit under management, unless your order form says otherwise. Units are counted on the billing date. Fees are billed monthly in advance and are non-refundable except where required by law. We may change fees with at least 30 days' notice.</p>
+    <h3>13. Your data</h3><p>You own the data you provide and the records created for you. You grant us the rights needed to host and process it to provide the Service, as described in our <a href="#/privacy">Privacy Policy</a>. You may export your data while your account is active and for 30 days after it ends.</p>
+    <h3>14. AI-generated content</h3><p>Agents generate messages and summaries automatically. They can make mistakes. Review important information, such as costs, dates and completion status, before relying on it. The Service does not provide legal, financial, tenant screening or professional advice.</p>
+    <h3>15. Acceptable use</h3><p>Do not use the Service to send unlawful, harassing, deceptive or unsolicited messages; to interfere with the Service; or to access other customers' data. We may suspend use that violates these Terms or carrier rules.</p>
+    <h3>16. Disclaimers</h3><p>The Service is provided "as is" and "as available." To the extent permitted by law, we disclaim implied warranties of merchantability, fitness for a particular purpose and non-infringement. We do not guarantee that messages will be delivered or that the Service will be uninterrupted. Do not rely on the Service as your only means of handling emergencies; call emergency services when anyone may be in danger.</p>
+    <h3>17. Limitation of liability</h3><p>To the extent permitted by law, neither party is liable for indirect, incidental, special, consequential or punitive damages, or lost profits, and our total liability for any claim is limited to the fees you paid us in the 12 months before the claim arose.</p>
+    <h3>18. Term and termination</h3><p>Subscriptions continue month to month until cancelled. You may cancel at any time, effective at the end of the current billing period. We may terminate for material breach that is not cured within 15 days of notice.</p>
+    <h3>19. Governing law</h3><p>These Terms are governed by the laws of the State of California, without regard to its conflict-of-laws rules. Disputes will be resolved in the state or federal courts located in California.</p>
+    <h3>20. Changes</h3><p>We may update these Terms. We will post changes here with a new effective date and notify client companies of material changes. Continued use after changes take effect means you accept them.</p>
+    <h3>21. Contact</h3><p>O Three Verve LLC (dba Sutro Pacific)<br>606 Lake Street, San Francisco, CA 94118<br><a href="mailto:support@sutropacific.com">support@sutropacific.com</a></p>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section id="page-contact" class="page">
+  <div class="border-b border-slate-200 bg-pacific-50"><div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14">
+    <p class="text-sm font-semibold uppercase tracking-wider text-pacific-600">Contact</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Talk to us</h1>
+    <p class="mt-4 text-lg text-slate-600">We usually reply within one business day.</p>
+  </div></div>
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid gap-6 md:grid-cols-3">
+      <div class="flex flex-col rounded-2xl border border-slate-200 p-6"><h2 class="text-lg font-semibold">Request a demo</h2><p class="mt-2 flex-1 text-slate-600">See how an agent runs a work order from start to finish with your own team.</p><a href="mailto:hello@sutropacific.com?subject=Sutro%20Pacific%20demo%20request" class="mt-6 font-semibold text-pacific-600">hello@sutropacific.com</a></div>
+      <div class="flex flex-col rounded-2xl border border-slate-200 p-6"><h2 class="text-lg font-semibold">Support</h2><p class="mt-2 flex-1 text-slate-600">Questions about the service, your account, or text messages you received from one of our agents.</p><a href="mailto:support@sutropacific.com?subject=Sutro%20Pacific%20support" class="mt-6 font-semibold text-pacific-600">support@sutropacific.com</a></div>
+      <div class="flex flex-col rounded-2xl border border-slate-200 p-6"><h2 class="text-lg font-semibold">Privacy requests</h2><p class="mt-2 flex-1 text-slate-600">Ask to access, correct or delete your information.</p><a href="mailto:privacy@sutropacific.com?subject=Privacy%20request" class="mt-6 font-semibold text-pacific-600">privacy@sutropacific.com</a></div>
+    </div>
+    <div class="mt-12 rounded-2xl bg-slate-50 p-6 text-sm text-slate-600">
+      <p class="font-semibold text-ink">Received a text from one of our agents?</p>
+      <p class="mt-2">Reply HELP for help or STOP to opt out at any time. Learn more on our <a href="#/sms" class="text-pacific-600 underline">SMS Program page</a>.</p>
+      <p class="mt-6 font-semibold text-ink">Company</p>
+      <p class="mt-2">Sutro Pacific is a service of O Three Verve LLC, a California limited liability company.<br>606 Lake Street, San Francisco, CA 94118</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="mt-24 border-t border-slate-200 bg-slate-50">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid gap-8 py-12 md:grid-cols-3">
+    <div>
+      <span class="inline-flex items-center gap-2 font-semibold tracking-tight"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#17707d"/><path d="M5 18c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M5 12c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-opacity=".6" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>Sutro Pacific</span>
+      <p class="mt-3 text-sm text-slate-600">AI agents that keep property teams on track, by text.</p>
+      <p class="mt-3 text-xs text-slate-500">Sutro Pacific is a service of O Three Verve LLC, a California limited liability company.</p>
+    </div>
+    <div class="text-sm"><p class="font-semibold">Company</p><ul class="mt-3 space-y-2 text-slate-600"><li><a href="#/">Home</a></li><li><a href="#/sms">SMS Program &amp; Opt-In</a></li><li><a href="#/contact">Contact</a></li></ul></div>
+    <div class="text-sm"><p class="font-semibold">Legal</p><ul class="mt-3 space-y-2 text-slate-600"><li><a href="#/privacy">Privacy Policy</a></li><li><a href="#/terms">Terms &amp; Conditions</a></li><li><a href="mailto:support@sutropacific.com">support@sutropacific.com</a></li></ul></div>
+  </div>
+  <div class="border-t border-slate-200 py-4 text-center text-xs text-slate-500">© 2026 O Three Verve LLC. All rights reserved.</div>
+</footer>
+
+<script>
+const conversations = {
+  workorder: [
+    ['a','Hi Alex, urgent work order at The Grove, Unit 5: kitchen sink leaking under the cabinet. Can you head over now?'],
+    ['p','On my way'],
+    ['a',"Thanks! Send a photo when you're there."],
+    ['p','Leak stopped. Need a part, about $85','[photo]'],
+    ['a',"That's within Strive's $200 auto-approve limit, go ahead. I'll check in at 1:30."],
+    ['p','All fixed','[photo]'],
+    ['a','Great work. Sent to Samantha to close out.']
+  ],
+  optin: [
+    ['a',"Hi Alex, this is Sutro, the team assistant for Strive Inc. I'll text you about work orders during your work hours. Msg frequency varies. Msg & data rates may apply. Reply YES to opt in, HELP for help, STOP to opt out."],
+    ['p','YES'],
+    ['a',"Thanks Alex, you're all set. I'll only text during your work hours. Tip: on more than one job, start with the property and unit, like 'Grove 4 done'. Reply STOP anytime to opt out."]
+  ]
+};
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+document.querySelectorAll('[data-phone]').forEach(el => {
+  const msgs = conversations[el.dataset.phone].map(([who,text,note]) => {
+    const cls = who === 'a'
+      ? 'max-w-[85%] rounded-2xl rounded-bl-sm bg-slate-100 px-3 py-2 text-sm text-ink'
+      : 'max-w-[85%] rounded-2xl rounded-br-sm bg-pacific-600 px-3 py-2 text-sm text-white';
+    return `<div class="flex ${who==='a'?'justify-start':'justify-end'}"><div class="${cls}">${esc(text)}${note?`<span class="mt-1 block text-[11px] opacity-70">${esc(note)}</span>`:''}</div></div>`;
+  }).join('');
+  el.innerHTML = `<div class="mx-auto w-full max-w-sm rounded-[2.5rem] border border-slate-300 bg-slate-900 p-3 shadow-xl"><div class="rounded-[2rem] bg-white"><div class="border-b border-slate-200 px-5 py-3 text-center"><p class="text-sm font-semibold">${esc(el.dataset.title)}</p><p class="text-xs text-slate-500">Text message</p></div><div class="space-y-3 px-4 py-5">${msgs}</div></div></div>`;
+});
+const agents = [
+  ['Sutro','Work orders and unit turns','Available now','Gets the right person moving on every work order, collects photos and approvals, and follows up until the job is closed. Coordinates move-outs and make-ready turns so units get back on the market faster.'],
+  ['Xena','Leads to leases','Coming soon','Keeps your leasing team on top of tours, applications and follow-ups, so vacant units lease faster.'],
+  ['Cash','Rent collection follow-through','Coming soon','Helps your property manager work through outstanding balances each month with a clear plan for every account.'],
+  ['Wilbur','Lease renewals','Coming soon','Looks ahead at upcoming lease expirations and keeps renewals moving before residents go month-to-month.']
+];
+document.getElementById('agents').innerHTML = agents.map(([n,f,s,b]) => `<div class="rounded-2xl border border-slate-200 p-6"><div class="flex items-center justify-between"><h3 class="text-xl font-semibold">${n}</h3><span class="rounded-full px-3 py-1 text-xs font-semibold ${s==='Available now'?'bg-pacific-100 text-pacific-700':'bg-slate-100 text-slate-600'}">${s}</span></div><p class="mt-1 text-sm font-medium text-pacific-600">${f}</p><p class="mt-3 text-slate-600">${b}</p></div>`).join('');
+document.getElementById('pricing').innerHTML = [10,50,100,150,200,250].map(u => `<tr><td class="px-5 py-3">${u}</td><td class="px-5 py-3 font-semibold">$${(100+4*u).toLocaleString('en-US')}</td></tr>`).join('');
+function route(){
+  const r = (location.hash.replace('#/','') || 'home');
+  const id = ['sms','privacy','terms','contact'].includes(r) ? r : 'home';
+  document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === 'page-'+id));
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange', route); route();
+</script>
+</body>
+</html>
