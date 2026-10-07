@@ -1,14 +1,27 @@
 import type { Bubble } from "@/components/PhoneMockup";
 
-// Example conversation shown on the home page (fictional company and people).
-export const workOrderConversation: Bubble[] = [
-  { from: "agent", text: "Hi Alex, urgent work order at The Grove, Unit 5: kitchen sink leaking under the cabinet. Can you head over now?" },
-  { from: "person", text: "On my way" },
-  { from: "agent", text: "Thanks! Send a photo when you're there." },
-  { from: "person", text: "Leak stopped. Need a part, about $85", note: "[photo]" },
-  { from: "agent", text: "That's within Strive's $200 auto-approve limit, go ahead. I'll check in at 1:30." },
-  { from: "person", text: "All fixed", note: "[photo]" },
-  { from: "agent", text: "Great work. Sent to Samantha to close out." },
+// Animated hero demo on the home page (fictional company and people).
+// "thread" picks the window: "alex" (maintenance tech) or "samantha" (admin / approver).
+export type ScriptStep = {
+  thread: "alex" | "samantha";
+  from: "agent" | "person";
+  text: string;
+  photo?: string; // image path under /public
+};
+
+export const heroScript: ScriptStep[] = [
+  { thread: "alex", from: "agent", text: "Hi Alex, urgent work order at The Grove, Unit 5: kitchen sink leaking under the cabinet. Can you head over now?" },
+  { thread: "alex", from: "person", text: "On my way" },
+  { thread: "alex", from: "agent", text: "Thanks! Send a photo when you're there." },
+  { thread: "alex", from: "person", text: "Leak stopped. Need a part that might be expensive, somewhere around $200. Can you check with Samantha first?", photo: "/demo/leak.jpg" },
+  { thread: "alex", from: "agent", text: "Let me get her approval and I'll get back to you here shortly." },
+  { thread: "samantha", from: "agent", text: "Alex is on-site at The Grove, Unit 5 and is requesting a $200 charge to fix an emergency plumbing leak. Do I have your approval?" },
+  { thread: "samantha", from: "person", text: "Yes, I approve." },
+  { thread: "samantha", from: "agent", text: "Thanks Samantha, I'll let Alex know." },
+  { thread: "alex", from: "agent", text: "You have Samantha's approval for the $200 part. Go ahead, and check in with me once the work is done." },
+  { thread: "alex", from: "person", text: "All fixed", photo: "/demo/fixed.jpg" },
+  { thread: "alex", from: "agent", text: "Great work. Sent to Samantha to close out." },
+  { thread: "samantha", from: "agent", text: "The Grove Unit 5 leak is fixed. Photos are attached and it's ready for you to close out." },
 ];
 
 // Opt-in flow shown on the SMS Program page (fictional company and people).

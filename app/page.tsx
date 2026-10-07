@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
-import { PhoneMockup } from "@/components/PhoneMockup";
+import { HeroChatDemo } from "@/components/HeroChatDemo";
 import { PricingTable } from "@/components/PricingTable";
-import { agents, workOrderConversation } from "@/lib/content";
+import { agents } from "@/lib/content";
 import { pricing, site } from "@/lib/site";
 
 const steps = [
@@ -24,15 +24,15 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-gradient-to-b from-pacific-50 to-white">
-        <Container className="grid items-center gap-12 py-16 md:py-24 lg:grid-cols-2">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-pacific-600">For multifamily property teams</p>
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 md:py-24 lg:px-8 xl:grid-cols-[minmax(0,1fr)_auto] xl:gap-10">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-pacific-600">For property management teams</p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-              Your property team, kept on track by text.
+              AI agents that keep your team ahead
             </h1>
             <p className="mt-5 text-lg text-slate-600">
-              Sutro Pacific&apos;s AI agents coordinate work orders and unit turns with your team over SMS. Work keeps
-              moving, nothing slips through the cracks, and you always know where things stand.
+              Sutro Pacific&apos;s AI agents set the tempo for fast-moving property management teams. They check in with
+              your team so work keeps moving, nothing slips through the cracks, and you always know where things stand.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -47,8 +47,8 @@ export default function Home() {
             </div>
             <p className="mt-6 text-sm text-slate-500">Built for owners and managers of 10 to 200+ units.</p>
           </div>
-          <PhoneMockup title="Sutro · Strive Inc." messages={workOrderConversation} />
-        </Container>
+          <HeroChatDemo />
+        </div>
       </section>
 
       {/* Problem */}

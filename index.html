@@ -10,7 +10,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 if (window.tailwind) tailwind.config = { theme: { extend: {
-  colors: { ink:'#0b1f33', sand:'#f6f1e9', pacific:{50:'#eef7f8',100:'#d5ecef',500:'#1f8a99',600:'#17707d',700:'#125a65',900:'#0b3640'} },
+  colors: { ink:'#0b1f33', sand:'#f6f1e9', pacific:{50:'#eef5ff',100:'#d6e6ff',500:'#3385ff',600:'#0066ff',700:'#0052cc',900:'#002a66'} },
   fontFamily: { sans:['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
 </script>
 <style>
@@ -22,8 +22,51 @@ if (window.tailwind) tailwind.config = { theme: { extend: {
   .prose-legal p{margin-bottom:1rem}
   .prose-legal ul{list-style:disc;padding-left:1.5rem;margin-bottom:1rem}
   .prose-legal li{margin-bottom:.35rem}
-  .prose-legal a{color:#17707d;text-decoration:underline}
+  .prose-legal a{color:#0066ff;text-decoration:underline}
   .preview-bar{font-size:12px}
+/* Hero chat demo (plain CSS so it works without a build step) */
+.hd{position:relative;display:grid;overflow:hidden;margin:0 -16px;padding:24px 0;font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+.hd-win{grid-area:1/1;margin:0 40px;transition:translate .5s,box-shadow .5s,border-color .5s}
+.hd-win.off-left{translate:calc(-100% - 12px) 0}.hd-win.off-right{translate:calc(100% + 12px) 0}
+.hd{touch-action:pan-y}.hd-win.peek{cursor:pointer}
+.hd-dotsnav{grid-area:2/1;display:flex;justify-content:center;gap:8px;margin-top:16px}
+.hd-dotsnav button{height:8px;width:8px;border-radius:999px;border:0;padding:0;background:#cbd5e1;transition:width .3s,background .3s;cursor:pointer}
+.hd-dotsnav button.on{width:24px;background:#0066ff}
+.hd-win{flex:none;background:#fff;border:1px solid #e2e8f0;border-radius:16px;box-shadow:0 25px 50px -12px rgba(15,23,42,.12);}
+.hd-win.active{border-color:rgba(51,133,255,.4);box-shadow:0 0 0 4px rgba(51,133,255,.1),0 25px 50px -12px rgba(15,23,42,.18)}
+.hd-head{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #f1f5f9}
+.hd-av{width:36px;height:36px;border-radius:999px;object-fit:cover;flex:none}
+.hd-name{font-size:14px;font-weight:600;color:#0b1f33;margin:0}
+.hd-role{font-size:12px;color:#64748b;margin:0}
+.hd-tag{margin-left:auto;font-size:11px;font-weight:500;color:#64748b;background:#f1f5f9;border-radius:999px;padding:2px 8px}
+.hd-body{display:flex;flex-direction:column;justify-content:flex-start;gap:10px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent;padding:16px;height:440px;outline:none}
+.hd-body::-webkit-scrollbar{width:6px}.hd-body::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:999px}.hd-body::-webkit-scrollbar-track{background:transparent}
+.hd-body.fade{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 48px);mask-image:linear-gradient(to bottom,transparent 0,#000 48px)}
+.hd-row{display:flex}.hd-row.a{justify-content:flex-start}.hd-row.p{justify-content:flex-end}
+.hd-msg{max-width:85%}
+.hd-from{font-size:11px;font-weight:500;color:#0066ff;margin:0 0 4px}
+.hd-b{font-size:14px;line-height:1.45;padding:8px 12px;border-radius:16px}
+.hd-row.a .hd-b{background:#f1f5f9;color:#0b1f33;border-bottom-left-radius:4px}
+.hd-row.p .hd-b{background:#0066ff;color:#fff;border-bottom-right-radius:4px}
+.hd-photo{display:block;width:160px;height:120px;border-radius:8px;margin-bottom:8px;object-fit:cover}
+.hd-dots{display:flex;gap:4px;padding:12px}
+.hd-dots span{width:6px;height:6px;border-radius:999px;background:#94a3b8;animation:hd-typing 1s infinite ease-in-out}
+.hd-row.p .hd-dots span{background:rgba(255,255,255,.8)}
+.hd-in{animation:hd-in .35s ease-out both}
+.hd-pop{animation:hd-pop .45s cubic-bezier(.2,.8,.2,1) both}
+.hd-hidden{visibility:hidden}
+@media (min-width:768px){
+  .hd{display:flex;flex-direction:row;align-items:flex-start;justify-content:center;gap:20px;overflow:visible;margin:0;padding:0}
+  .hd-win{margin:0}.hd-win.off-left,.hd-win.off-right{translate:none}
+  .hd-dotsnav{display:none}.hd-win.peek{cursor:auto}
+  .hd-alex{width:330px}
+  .hd-sam{width:330px;margin-top:96px}
+}
+@keyframes hd-in{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes hd-pop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+@keyframes hd-typing{0%,60%,100%{opacity:.35;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.hd-in,.hd-pop,.hd-dots span{animation:none}}
+
 </style>
 </head>
 <body class="font-sans antialiased bg-white">
@@ -33,7 +76,7 @@ if (window.tailwind) tailwind.config = { theme: { extend: {
 <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur">
   <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
     <a href="#/" class="inline-flex items-center gap-2 font-semibold tracking-tight text-ink">
-      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#17707d"/><path d="M5 18c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M5 12c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-opacity=".6" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#0066ff"/><path d="M5 18c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M5 12c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-opacity=".6" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
       <span>Sutro Pacific</span>
     </a>
     <nav class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
@@ -59,18 +102,18 @@ if (window.tailwind) tailwind.config = { theme: { extend: {
 <!-- ======================= HOME ======================= -->
 <section id="page-home" class="page">
   <div class="bg-gradient-to-b from-pacific-50 to-white">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid items-center gap-12 py-16 md:py-24 lg:grid-cols-2">
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-wider text-pacific-600">For multifamily property teams</p>
-        <h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">Your property team, kept on track by text.</h1>
-        <p class="mt-5 text-lg text-slate-600">Sutro Pacific's AI agents coordinate work orders and unit turns with your team over SMS. Work keeps moving, nothing slips through the cracks, and you always know where things stand.</p>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid items-center gap-12 py-16 md:py-24 xl:grid-cols-[minmax(0,1fr)_auto] xl:gap-10">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-wider text-pacific-600">For property management teams</p>
+        <h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">AI agents that keep your team ahead</h1>
+        <p class="mt-5 text-lg text-slate-600">Sutro Pacific's AI agents set the tempo for fast-moving property management teams. They check in with your team so work keeps moving, nothing slips through the cracks, and you always know where things stand.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="mailto:hello@sutropacific.com?subject=Sutro%20Pacific%20demo%20request" class="rounded-full bg-pacific-600 px-6 py-3 text-sm font-semibold text-white hover:bg-pacific-700">Request a demo</a>
           <a href="#how" onclick="document.getElementById('how').scrollIntoView();return false;" class="rounded-full px-6 py-3 text-sm font-semibold ring-1 ring-slate-300 hover:bg-white">See how it works</a>
         </div>
         <p class="mt-6 text-sm text-slate-500">Built for owners and managers of 10 to 200+ units.</p>
       </div>
-      <div data-phone="workorder" data-title="Sutro · Strive Inc."></div>
+      <div id="hero-demo" aria-label="Example: Sutro coordinating a work order by text"></div>
     </div>
   </div>
 
@@ -282,7 +325,7 @@ if (window.tailwind) tailwind.config = { theme: { extend: {
 <footer class="mt-24 border-t border-slate-200 bg-slate-50">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid gap-8 py-12 md:grid-cols-3">
     <div>
-      <span class="inline-flex items-center gap-2 font-semibold tracking-tight"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#17707d"/><path d="M5 18c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M5 12c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-opacity=".6" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>Sutro Pacific</span>
+      <span class="inline-flex items-center gap-2 font-semibold tracking-tight"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#0066ff"/><path d="M5 18c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M5 12c3-3 6-3 9 0s6 3 9 0" stroke="white" stroke-opacity=".6" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>Sutro Pacific</span>
       <p class="mt-3 text-sm text-slate-600">AI agents that keep property teams on track, by text.</p>
       <p class="mt-3 text-xs text-slate-500">Sutro Pacific is a service of O Three Verve LLC, a California limited liability company.</p>
     </div>
@@ -294,15 +337,6 @@ if (window.tailwind) tailwind.config = { theme: { extend: {
 
 <script>
 const conversations = {
-  workorder: [
-    ['a','Hi Alex, urgent work order at The Grove, Unit 5: kitchen sink leaking under the cabinet. Can you head over now?'],
-    ['p','On my way'],
-    ['a',"Thanks! Send a photo when you're there."],
-    ['p','Leak stopped. Need a part, about $85','[photo]'],
-    ['a',"That's within Strive's $200 auto-approve limit, go ahead. I'll check in at 1:30."],
-    ['p','All fixed','[photo]'],
-    ['a','Great work. Sent to Samantha to close out.']
-  ],
   optin: [
     ['a',"Hi Alex, this is Sutro, the team assistant for Strive Inc. I'll text you about work orders during your work hours. Msg frequency varies. Msg & data rates may apply. Reply YES to opt in, HELP for help, STOP to opt out."],
     ['p','YES'],
@@ -334,6 +368,76 @@ function route(){
   window.scrollTo(0,0);
 }
 window.addEventListener('hashchange', route); route();
+</script>
+<script>
+(function(){
+const script = [
+  ['alex','a',"Hi Alex, urgent work order at The Grove, Unit 5: kitchen sink leaking under the cabinet. Can you head over now?"],
+  ['alex','p',"On my way"],
+  ['alex','a',"Thanks! Send a photo when you're there."],
+  ['alex','p',"Leak stopped. Need a part that might be expensive, somewhere around $200. Can you check with Samantha first?",'public/demo/leak.jpg'],
+  ['alex','a',"Let me get her approval and I'll get back to you here shortly."],
+  ['samantha','a',"Alex is on-site at The Grove, Unit 5 and is requesting a $200 charge to fix an emergency plumbing leak. Do I have your approval?"],
+  ['samantha','p',"Yes, I approve."],
+  ['samantha','a',"Thanks Samantha, I'll let Alex know."],
+  ['alex','a',"You have Samantha's approval for the $200 part. Go ahead, and check in with me once the work is done."],
+  ['alex','p',"All fixed",'public/demo/fixed.jpg'],
+  ['alex','a',"Great work. Sent to Samantha to close out."],
+  ['samantha','a',"The Grove Unit 5 leak is fixed. Photos are attached and it's ready for you to close out."]
+];
+const root = document.getElementById('hero-demo'); if(!root) return;
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const cam = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 7h3l2-2h6l2 2h3v12H4z" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5"/></svg>';
+const win = (id,name,role,img,extra) => `<div class="hd-win ${extra}" id="hd-${id}"><div class="hd-head"><img class="hd-av" src="${img}" alt="${name}"><div><p class="hd-name">${name}</p><p class="hd-role">${role} · Strive Inc.</p></div><span class="hd-tag">SMS</span></div><div class="hd-body"></div></div>`;
+root.innerHTML = `<div class="hd">${win('alex','Alex Dominguez','Maintenance Lead','public/demo/alex.jpg','hd-alex')}${win('samantha','Samantha Phillips','Admin · Approver','public/demo/samantha.jpg','hd-sam hd-hidden')}</div>`;
+const W = {alex:document.getElementById('hd-alex'), samantha:document.getElementById('hd-samantha')};
+const body = t => W[t].querySelector('.hd-body');
+const bubble = ([t,f,text,photo]) => `<div class="hd-row ${f} hd-in"><div class="hd-msg">${f==='a'?'<p class="hd-from">Sutro</p>':''}<div class="hd-b">${photo?`<img class="hd-photo" src="${photo}" alt="Photo from the job site">`:''}${esc(text)}</div></div></div>`;
+const dots = f => `<div class="hd-row ${f} hd-typing"><div class="hd-b hd-dots"><span></span><span style="animation-delay:150ms"></span><span style="animation-delay:300ms"></span></div></div>`;
+// Keep the newest message in view unless the visitor has scrolled up to read; fade the top edge once scrolled.
+const stick = {alex:true, samantha:true};
+for (const k in W){ const b=body(k); b.tabIndex=0; b.addEventListener('scroll',()=>{ b.classList.toggle('fade', b.scrollTop>4); stick[k] = b.scrollHeight-b.scrollTop-b.clientHeight < 60; }, {passive:true}); }
+function settle(t){ const b=body(t); if(stick[t] && b.scrollHeight>b.clientHeight+1) b.scrollTo({top:b.scrollHeight,behavior:'smooth'}); }
+let liveThread='alex', userFocus=null;
+const samIsOpen = () => !W.samantha.classList.contains('hd-hidden');
+function layout(){
+  const auto = (samIsOpen() && liveThread==='samantha') ? 'samantha' : 'alex';
+  const focus = (samIsOpen() && userFocus) ? userFocus : auto;
+  W.alex.classList.toggle('off-left', focus!=='alex'); W.samantha.classList.toggle('off-right', focus!=='samantha');
+  W.alex.classList.toggle('peek', focus!=='alex'); W.samantha.classList.toggle('peek', focus!=='samantha');
+  dotsNav.classList.toggle('hd-hidden', !samIsOpen());
+  dotsNav.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.t===focus));
+}
+function setActive(t){ for (const k in W) W[k].classList.toggle('active', k===t); if (t!==liveThread){ liveThread=t; userFocus=null; } layout(); }
+const isCarousel = () => !window.matchMedia('(min-width: 768px)').matches;
+function show(t){ if (samIsOpen() && isCarousel()){ userFocus=t; layout(); } }
+const hd = root.querySelector('.hd');
+hd.insertAdjacentHTML('beforeend','<div class="hd-dotsnav hd-hidden"><button type="button" data-t="alex" aria-label="Show Alex Dominguez\'s conversation"></button><button type="button" data-t="samantha" aria-label="Show Samantha Phillips\'s conversation"></button></div>');
+const dotsNav = hd.querySelector('.hd-dotsnav');
+dotsNav.addEventListener('click', e => { const b=e.target.closest('button'); if(b) show(b.dataset.t); });
+for (const k in W) W[k].addEventListener('click', () => { if (W[k].classList.contains('peek')) show(k); });
+let ts=null;
+hd.addEventListener('touchstart', e => { ts={x:e.touches[0].clientX,y:e.touches[0].clientY}; }, {passive:true});
+hd.addEventListener('touchend', e => { if(!ts) return; const dx=e.changedTouches[0].clientX-ts.x, dy=e.changedTouches[0].clientY-ts.y; ts=null; if(Math.abs(dx)>40 && Math.abs(dx)>Math.abs(dy)) show(dx<0?'samantha':'alex'); }, {passive:true});
+function openSam(){ const s=W.samantha; if(s.classList.contains('hd-hidden')){ s.classList.remove('hd-hidden'); s.classList.add('hd-pop'); layout(); } }
+function reset(){ for (const k in W){ body(k).innerHTML=''; body(k).classList.remove('fade'); } W.samantha.classList.add('hd-hidden'); W.samantha.classList.remove('hd-pop'); userFocus=null; liveThread='alex'; setActive('alex'); }
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){ script.forEach(s=>{ if(s[0]==='samantha') openSam(); body(s[0]).insertAdjacentHTML('beforeend',bubble(s)); }); setActive('samantha'); return; }
+const sleep = ms => new Promise(r=>setTimeout(r,ms));
+// Plays once, then stays on the finished conversation.
+async function run(){
+  reset(); await sleep(600);
+  for (const s of script){
+    if (s[0]==='samantha') openSam();
+    setActive(s[0]);
+    body(s[0]).insertAdjacentHTML('beforeend',dots(s[1])); settle(s[0]);
+    await sleep(Math.min(2200,700+s[2].length*14));
+    body(s[0]).querySelector('.hd-typing')?.remove();
+    body(s[0]).insertAdjacentHTML('beforeend',bubble(s)); settle(s[0]);
+    await sleep(900);
+  }
+}
+run();
+})();
 </script>
 </body>
 </html>
