@@ -80,6 +80,14 @@ body {
 .chat-scroll::-webkit-scrollbar { width: 6px; }
 .chat-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
 .chat-scroll::-webkit-scrollbar-track { background: transparent; }
+/* Desktop: Samantha's window slides in from the right */
+@keyframes window-in-right {
+  from { opacity: 0; transform: translateX(48px); }
+  to { opacity: 1; transform: none; }
+}
+@media (min-width: 768px) {
+  .window-in { animation-name: window-in-right; animation-duration: 550ms; }
+}
 @media (prefers-reduced-motion: reduce) {
   .bubble-in, .window-in, .typing-dot { animation: none; }
 }

@@ -63,3 +63,16 @@ export const agents = [
     body: "Looks ahead at upcoming lease expirations and keeps renewals moving before residents go month-to-month.",
   },
 ];
+
+// Work order completion comparison on the home page.
+// Benchmark: 3.88 days (~93 hours) from creation to completion, 2023–2024 AppWork data reported by the
+// National Apartment Association (naahq.org/node/6438).
+// Keep sutroMeasured = false until the 4-hour figure comes from real, measured work orders. Then set it
+// to true and fill in sutroSample (e.g., "Measured across 412 work orders at 6 properties, Jan–Mar 2027.").
+export const completionStats = {
+  benchmarkHours: 93,
+  benchmarkDays: 3.9,
+  sutroHours: 4,
+  sutroMeasured: false,
+  sutroSample: "",
+};

@@ -84,7 +84,10 @@ export function HeroChatDemo() {
         typing={typing?.thread === "alex" ? typing.from : null}
         active={lastThread === "alex"}
         onSelect={focus !== "alex" ? () => show("alex") : undefined}
-        className={`${focus === "alex" ? "translate-x-0" : "-translate-x-[calc(100%+12px)]"} md:w-[330px] md:translate-x-0`}
+        className={`${focus === "alex" ? "translate-x-0" : "-translate-x-[calc(100%+12px)]"} md:w-[330px] ${
+          // Desktop: centered on its own, then slides left to make room when Samantha's window arrives.
+          samanthaOpen ? "md:translate-x-0" : "md:translate-x-[175px]"
+        }`}
       />
       {/* Always rendered so the layout never shifts; hidden until Sutro contacts Samantha. */}
       <ChatWindow

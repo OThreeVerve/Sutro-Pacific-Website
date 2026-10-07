@@ -59,11 +59,14 @@ if (window.tailwind) tailwind.config = { theme: { extend: {
   .hd{display:flex;flex-direction:row;align-items:flex-start;justify-content:center;gap:20px;overflow:visible;margin:0;padding:0}
   .hd-win{margin:0}.hd-win.off-left,.hd-win.off-right{translate:none}
   .hd-dotsnav{display:none}.hd-win.peek{cursor:auto}
+  .hd:has(.hd-sam.hd-hidden) .hd-alex{translate:175px 0}
+  .hd-pop{animation:hd-pop-right .55s cubic-bezier(.2,.8,.2,1) both}
   .hd-alex{width:330px}
   .hd-sam{width:330px;margin-top:96px}
 }
 @keyframes hd-in{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
 @keyframes hd-pop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+@keyframes hd-pop-right{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:none}}
 @keyframes hd-typing{0%,60%,100%{opacity:.35;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
 @media (prefers-reduced-motion:reduce){.hd-in,.hd-pop,.hd-dots span{animation:none}}
 
@@ -109,11 +112,45 @@ if (window.tailwind) tailwind.config = { theme: { extend: {
         <p class="mt-5 text-lg text-slate-600">Sutro Pacific's AI agents set the tempo for fast-moving property management teams. They check in with your team so work keeps moving, nothing slips through the cracks, and you always know where things stand.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="mailto:hello@sutropacific.com?subject=Sutro%20Pacific%20demo%20request" class="rounded-full bg-pacific-600 px-6 py-3 text-sm font-semibold text-white hover:bg-pacific-700">Request a demo</a>
-          <a href="#how" onclick="document.getElementById('how').scrollIntoView();return false;" class="rounded-full px-6 py-3 text-sm font-semibold ring-1 ring-slate-300 hover:bg-white">See how it works</a>
         </div>
         <p class="mt-6 text-sm text-slate-500">Built for owners and managers of 10 to 200+ units.</p>
       </div>
       <div id="hero-demo" aria-label="Example: Sutro coordinating a work order by text"></div>
+    </div>
+  </div>
+
+  <!-- Work order completion -->
+  <div id="results" class="border-y border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <div class="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-pacific-600">Work order completion</p>
+          <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">From days to hours.</h2>
+          <p class="mt-4 text-lg text-slate-600">The average work order takes 93 hours (3.9 days) from the moment it's created to the moment the repair is done. Sutro Pacific is built to bring that down to 4 hours by keeping every step moving, from request to finished repair.</p>
+          <div class="mt-8 flex items-baseline gap-3">
+            <span class="text-6xl font-semibold tracking-tight text-ink sm:text-7xl">23×</span>
+            <span class="text-slate-600">faster than the industry average</span>
+          </div>
+        </div>
+        <figure>
+          <div class="space-y-7 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8" role="img" aria-label="Industry average 93 hours versus Sutro Pacific target 4 hours from work order creation to completion">
+            <div>
+              <div class="flex items-baseline justify-between gap-4"><span class="text-sm font-medium text-ink">Industry average</span><span class="text-sm text-slate-600"><span class="text-lg font-semibold text-ink">93 hours</span> · 3.9 days</span></div>
+              <div class="mt-2 h-3 w-full rounded-full bg-slate-200/70"><div class="h-3 rounded-full bg-slate-400" style="width:100%"></div></div>
+            </div>
+            <div>
+              <div class="flex items-baseline justify-between gap-4"><span class="text-sm font-medium text-ink">Sutro Pacific target</span><span class="text-sm text-slate-600"><span class="text-lg font-semibold text-ink">4 hours</span> · 23× faster</span></div>
+              <div class="mt-2 h-3 w-full rounded-full bg-slate-200/70"><div class="h-3 rounded-full bg-pacific-600" style="width:4.3%"></div></div>
+            </div>
+            <p class="text-xs text-slate-500">Time from work order creation to completed repair.</p>
+          </div>
+        </figure>
+      </div>
+      <div class="mt-14 grid gap-6 md:grid-cols-3">
+        <div class="border-t-2 border-pacific-600 pt-4"><h3 class="font-semibold">Dispatched the moment it's created</h3><p class="mt-2 text-sm text-slate-600">The right tech gets the job by text right away, with photos and details.</p></div>
+        <div class="border-t-2 border-pacific-600 pt-4"><h3 class="font-semibold">Follow-ups that never wait</h3><p class="mt-2 text-sm text-slate-600">Sutro checks in at every step, during each person's work hours, until the job is closed.</p></div>
+        <div class="border-t-2 border-pacific-600 pt-4"><h3 class="font-semibold">Approvals in one reply</h3><p class="mt-2 text-sm text-slate-600">Spending approvals go to the owner by text, so parts aren't held up for days.</p></div>
+      </div>
     </div>
   </div>
 

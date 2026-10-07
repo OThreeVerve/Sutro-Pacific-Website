@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { HeroChatDemo } from "@/components/HeroChatDemo";
+import { CompletionStats } from "@/components/CompletionStats";
 import { PricingTable } from "@/components/PricingTable";
 import { agents } from "@/lib/content";
 import { pricing, site } from "@/lib/site";
@@ -41,15 +42,14 @@ export default function Home() {
               >
                 Request a demo
               </a>
-              <a href="#how-it-works" className="rounded-full px-6 py-3 text-sm font-semibold text-ink ring-1 ring-slate-300 hover:bg-white">
-                See how it works
-              </a>
             </div>
             <p className="mt-6 text-sm text-slate-500">Built for owners and managers of 10 to 200+ units.</p>
           </div>
           <HeroChatDemo />
         </div>
       </section>
+
+      <CompletionStats />
 
       {/* Problem */}
       <section>
