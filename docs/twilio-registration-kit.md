@@ -42,8 +42,8 @@ From the number: **Finish setting up your number → toll-free verification**, o
 | Field | What to enter |
 |---|---|
 | Business / profile | The O Three Verve LLC profile from Step 2 |
-| Use case category | Account Notifications |
-| Use case description | "Sutro Pacific (a service of O Three Verve LLC) sends operational text messages to employees and vendors of property management companies to coordinate maintenance work orders and unit turns: new job requests, status check-ins, photo requests, spending approvals and completion notices. Recipients are added by their employer and must reply YES to opt in. No marketing. Residents are never messaged. This number is used for product demonstrations and testing with Sutro Pacific's own team." |
+| Use case(s) | **Account Notifications** (primary). Adding **Customer Care** is fine, since recipients reply in two-way conversations |
+| Use case description (max 500 characters) | "Sutro Pacific (a service of O Three Verve LLC) sends operational texts to employees and vendors of property management companies to coordinate maintenance work orders: new job requests, status check-ins, photo requests, spending approvals and completion notices. Recipients are added by their employer and must reply YES to opt in. Two-way, no marketing. Residents are never texted. This number is for demos and testing with our own team." (438 characters) |
 | Estimated monthly volume | 1,000 |
 | Opt-in type | Via Text |
 | Opt-in image / proof URL | https://[your domain]/sms (shows the full opt-in flow and the welcome message) |
@@ -67,7 +67,7 @@ Use 3–5 of these. Each names the brand; the first carries the full disclosures
 3. **Check-in / photo request**
    "Sutro (Sutro Pacific): Checking in on The Grove Unit 5 leak. Is it fixed? Please reply with a photo of the repair."
 4. **Spending approval (to owner)**
-   "Sutro (Sutro Pacific): Alex's parts estimate for The Grove Unit 5 is $340, above your $200 auto-approve limit. Reply YES to approve or NO to decline."
+   "Sutro (Sutro Pacific): WO-5A, The Grove Unit 5. Alex needs $340 in parts to replace the sink trap. Reply APPROVE or DENY. Reply STOP to opt out."
 5. **Completion**
    "Sutro (Sutro Pacific): Thanks Alex, the Unit 5 work order is complete and has been sent for review. Reply STOP to opt out."
 
