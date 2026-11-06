@@ -429,7 +429,7 @@ const win = (id,name,role,img,extra) => `<div class="hd-win ${extra}" id="hd-${i
 root.innerHTML = `<div class="hd">${win('alex','Alex Dominguez','Maintenance Lead','public/demo/alex.jpg','hd-alex')}${win('samantha','Samantha Phillips','Admin · Approver','public/demo/samantha.jpg','hd-sam hd-hidden')}</div>`;
 const W = {alex:document.getElementById('hd-alex'), samantha:document.getElementById('hd-samantha')};
 const body = t => W[t].querySelector('.hd-body');
-const bubble = ([t,f,text,photo]) => `<div class="hd-row ${f} hd-in"><div class="hd-msg">${f==='a'?'<p class="hd-from">Sutro Pacific • AI Agent</p>':''}<div class="hd-b">${photo?`<img class="hd-photo" src="${photo}" alt="Photo from the job site">`:''}${esc(text)}</div></div></div>`;
+const bubble = ([t,f,text,photo]) => `<div class="hd-row ${f} hd-in"><div class="hd-msg">${f==='a'?'<p class="hd-from">Sutro AI Agent</p>':''}<div class="hd-b">${photo?`<img class="hd-photo" src="${photo}" alt="Photo from the job site">`:''}${esc(text)}</div></div></div>`;
 const dots = f => `<div class="hd-row ${f} hd-typing"><div class="hd-b hd-dots"><span></span><span style="animation-delay:150ms"></span><span style="animation-delay:300ms"></span></div></div>`;
 // Keep the newest message in view unless the visitor has scrolled up to read; fade the top edge once scrolled.
 const stick = {alex:true, samantha:true};
