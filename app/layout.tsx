@@ -8,12 +8,12 @@ import { site } from "@/lib/site";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 const description =
-  "Sutro Pacific's AI agents set the tempo for fast-moving property management teams. They check in with your team so work keeps moving, nothing slips through the cracks, and you always know where things stand.";
+  "Sutro Pacific's AI agents bring consistency and accountability to your daily operations. They follow up with your team, keep tasks moving, and give you a clearer picture of what's getting done and what needs attention.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Sutro Pacific | AI agents that keep property management teams on track",
+    default: "Sutro Pacific | Run a tighter property management operation",
     template: "%s | Sutro Pacific",
   },
   description,
@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Sutro Pacific",
     url: "/",
-    title: "Sutro Pacific | AI agents that keep property management teams on track",
+    title: "Sutro Pacific | Run a tighter property management operation",
     description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sutro Pacific | AI agents that keep property management teams on track",
+    title: "Sutro Pacific | Run a tighter property management operation",
     description,
   },
 };

@@ -29,11 +29,12 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-pacific-600">For property management teams</p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-              AI agents that keep your team ahead
+              Run a tighter property management operation.
             </h1>
             <p className="mt-5 text-lg text-slate-600">
-              Sutro Pacific&apos;s AI agents set the tempo for fast-moving property management teams. They check in with
-              your team so work keeps moving, nothing slips through the cracks, and you always know where things stand.
+              Sutro Pacific&apos;s AI agents bring consistency and accountability to your daily operations. They follow up
+              with your team, keep tasks moving, and give you a clearer picture of what&apos;s getting done and what needs
+              attention.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
