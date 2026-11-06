@@ -193,7 +193,7 @@ function Bubble({ step }: { step: ScriptStep }) {
   return (
     <div className={`bubble-in flex ${agent ? "justify-start" : "justify-end"}`}>
       <div className="max-w-[85%]">
-        {agent ? <p className="mb-1 text-[11px] font-medium text-pacific-600">Sutro</p> : null}
+        {agent ? <p className="mb-1 text-[11px] font-medium text-pacific-600">Sutro Pacific • AI Agent</p> : null}
         <div
           className={
             agent
