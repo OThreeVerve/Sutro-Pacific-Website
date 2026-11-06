@@ -29,7 +29,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-pacific-600">For property management teams</p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-              Run a tighter property management operation.
+              Tighter operations, less chasing.
             </h1>
             <p className="mt-5 text-lg text-slate-600">
               Sutro Pacific&apos;s AI agents bring consistency and accountability to your daily operations. They follow up
