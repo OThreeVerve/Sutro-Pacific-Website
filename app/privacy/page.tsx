@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <PageHeader eyebrow="Legal" title="Privacy Policy" intro={`Effective ${site.effectiveDate}`} />
+      <PageHeader eyebrow="Legal" title="Privacy Policy" intro={`Effective ${site.privacyEffectiveDate}`} />
       <Container className="max-w-3xl py-14">
         <div className="prose-legal">
           <p>

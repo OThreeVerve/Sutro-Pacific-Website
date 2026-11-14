@@ -12,7 +12,8 @@ export const site = {
   supportEmail: "support@sutropacific.com", // PLACEHOLDER
   privacyEmail: "privacy@sutropacific.com", // PLACEHOLDER
   mailingAddress: "606 Lake Street, San Francisco, CA 94118", // must match the address on your Twilio business profile
-  effectiveDate: "November 13, 2026",
+  privacyEffectiveDate: "November 13, 2026",
+  termsEffectiveDate: "November 13, 2026", // set to the day the terms change deploys
   programName: "Sutro Pacific Team Assistant",
 };
 

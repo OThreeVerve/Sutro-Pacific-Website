@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <>
-      <PageHeader eyebrow="Legal" title="Terms & Conditions" intro={`Effective ${site.effectiveDate}`} />
+      <PageHeader eyebrow="Legal" title="Terms & Conditions" intro={`Effective ${site.termsEffectiveDate}`} />
       <Container className="max-w-3xl py-14">
         <div className="prose-legal">
           <p>
@@ -42,8 +42,9 @@ export default function TermsPage() {
           <p>
             Message frequency varies based on the work assigned to you. Message and data rates may apply. Routine messages
             are sent only during your scheduled work hours and never before 8:00 AM or after 8:00 PM local time, except
-            urgent messages to people who have agreed to be emergency contacts. Replies to messages you send us may arrive
-            outside these hours.
+            urgent messages to people who have agreed to be emergency contacts. If you text us outside your work hours,
+            you&apos;ll get one short acknowledgment, and we&apos;ll follow up during your work hours. Emergency contacts may
+            get replies at any time.
           </p>
 
           <h3>4. Opting out</h3>

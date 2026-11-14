@@ -63,7 +63,8 @@ export default function SmsProgramPage() {
             Message frequency varies with the amount of work assigned to you, typically a few messages per assigned task.
             Routine messages are sent only during your scheduled work hours and never before 8:00 AM or after 8:00 PM in
             your local time. People who have separately agreed to be emergency contacts may receive messages at other times
-            about urgent issues such as active leaks. Replies to messages you send us may arrive outside these hours.
+            about urgent issues such as active leaks. If you text us outside your work hours, you&apos;ll get one short
+            acknowledgment, and we&apos;ll follow up during your work hours. Emergency contacts may get replies at any time.
           </p>
 
           <h2>Message and data rates</h2>
