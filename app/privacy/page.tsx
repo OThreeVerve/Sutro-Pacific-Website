@@ -30,7 +30,8 @@ export default function PrivacyPage() {
           </ul>
           <p>
             When a client company gives us information about its own team, properties or residents, we process that
-            information on the client company&apos;s behalf and under its instructions, as its service provider.
+            information on the client company&apos;s behalf and under its instructions, as its service provider. We do not
+            sell or share that information, and we use it only to provide the Service to that client company.
           </p>
 
           <h2>2. Information we collect</h2>
@@ -40,7 +41,7 @@ export default function PrivacyPage() {
             <li><strong>Text message content:</strong> messages, photos and other attachments exchanged with our agents, with dates, times and delivery status.</li>
             <li><strong>Consent records:</strong> when and how a person opted in to or out of text messages.</li>
             <li><strong>Property information</strong> provided by client companies: property and unit details, work order details and, where needed, resident names associated with a unit. We never use resident information to contact residents.</li>
-            <li><strong>Website and usage information:</strong> basic technical data such as browser type, pages visited and IP address, collected through standard server logs and essential cookies.</li>
+            <li><strong>Website and usage information:</strong> basic technical data such as browser type, pages visited and IP address, collected through standard server logs and essential cookies. We do not track visitors across other websites over time, and we do not allow third parties to do so on our website, so we do not respond differently to browser &quot;Do Not Track&quot; signals.</li>
           </ul>
 
           <h2>3. How we use information</h2>
@@ -58,7 +59,9 @@ export default function PrivacyPage() {
             Our agents use artificial intelligence services to understand replies to text messages and to word the
             messages they send. These providers process message content only to deliver the Service to us, under
             agreements that do not permit them to use it to train their models or for their own purposes. Decisions such as
-            spending approvals are made by people at the client company, not by our agents.
+            spending approvals are made by people at the client company, not by our agents. Our AI providers operate under
+            zero data retention terms, so they do not keep message content after processing it, except that a provider may
+            keep a request its safety systems flag for review. We keep our own AI processing records for 90 days.
           </p>
 
           <h2>5. How we share information</h2>
@@ -100,7 +103,8 @@ export default function PrivacyPage() {
           <p>
             We use administrative, technical and physical safeguards, including encryption in transit and at rest, access
             controls that separate each client company&apos;s data, and audit logs. No system is perfectly secure, but we work
-            to protect the information we handle.
+            to protect the information we handle. If a security incident affects your information, we will notify the
+            client company and, where the law requires, you.
           </p>
 
           <h2>9. Your choices and rights</h2>
@@ -120,7 +124,7 @@ export default function PrivacyPage() {
           </ul>
           <p>
             To make a request, email <a href={`mailto:${site.privacyEmail}`}>{site.privacyEmail}</a>. We will verify your
-            request before acting on it.
+            request before acting on it and respond within 45 days.
           </p>
 
           <h2>10. Children</h2>

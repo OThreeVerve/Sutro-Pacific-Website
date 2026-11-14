@@ -33,7 +33,7 @@ export const optInConversation: Bubble[] = [
   { from: "person", text: "YES" },
   {
     from: "agent",
-    text: "Thanks Alex, you're all set. I'll only text during your work hours. Tip: on more than one job, start with the property and unit, like 'Grove 4 done'. Reply STOP anytime to opt out.",
+    text: "Thanks Alex, you're all set. I'll text you about work orders during your work hours. Tip: on more than one job, start with the property and unit, like 'Grove 4 done'. Reply STOP anytime to opt out.",
   },
 ];
 

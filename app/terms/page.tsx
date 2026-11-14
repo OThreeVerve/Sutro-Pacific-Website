@@ -35,14 +35,15 @@ export default function TermsPage() {
           <p>
             You join the program when a client company you work with confirms that you agreed to receive these messages and
             you reply YES (or START) to our welcome message. Consent is not a condition of employment or of doing business
-            with any client company.
+            with any client company. If the number is your personal mobile number, only your own YES reply opts you in.
           </p>
 
           <h3>3. Message frequency and cost</h3>
           <p>
             Message frequency varies based on the work assigned to you. Message and data rates may apply. Routine messages
             are sent only during your scheduled work hours and never before 8:00 AM or after 8:00 PM local time, except
-            urgent messages to people who have agreed to be emergency contacts.
+            urgent messages to people who have agreed to be emergency contacts. Replies to messages you send us may arrive
+            outside these hours.
           </p>
 
           <h3>4. Opting out</h3>
@@ -90,11 +91,13 @@ export default function TermsPage() {
 
           <h3>11. Your messaging responsibilities</h3>
           <ul>
-            <li>Add only team members and vendors who have agreed to receive operational text messages, and keep their contact details and work schedules accurate.</li>
+            <li>Add only team members and vendors who have agreed to receive operational text messages, and keep their contact details and work schedules accurate. You represent that each person you add gave you permission to share their mobile number for work texts, and you will tell us promptly if that permission ends.</li>
             <li>Do not make consent a condition of employment, and coordinate another way with anyone who opts out.</li>
+            <li>You set each person&apos;s work schedule and emergency contact status in the dashboard. You are responsible for when your team members receive texts and for any wages owed for time they spend reading or responding to them.</li>
             <li>Do not use the Service to message residents, prospects or the public, or to send marketing.</li>
             <li>Set spending limits, approvers and other policies in the dashboard. The agents follow these settings; they do not make spending or business decisions for you.</li>
-            <li>Comply with laws that apply to your business, including employment, privacy and fair housing laws.</li>
+            <li>Comply with laws that apply to your business, including employment, privacy and fair housing laws, and give your team members any notice those laws require about the information you share with us.</li>
+            <li>You will defend and indemnify {site.brand} against third-party claims arising from a person you added who had not agreed to receive texts, from your schedules, settings, instructions or message content, or from your violation of law or these Terms.</li>
           </ul>
 
           <h3>12. Fees</h3>
@@ -108,7 +111,17 @@ export default function TermsPage() {
           <p>
             You own the data you provide and the records created for you. You grant us the rights needed to host and process
             it to provide the Service, as described in our <Link href="/privacy">Privacy Policy</Link>. You may export your
-            data while your account is active and for 30 days after it ends.
+            data while your account is active and for 30 days after it ends. When we process personal information for you,
+            we act as your service provider under the California Consumer Privacy Act. We will process it only for the
+            business purpose of providing the Service; we will not sell or share it, retain, use or disclose it outside our
+            direct business relationship with you, or combine it with personal information from other sources except as that
+            law allows; we will comply with that law and give the same level of privacy protection it requires; we will
+            notify you if we can no longer meet these obligations; and you may take reasonable steps to stop and fix any
+            unauthorized use.
+          </p>
+          <p>
+            Security incidents. We will notify you without unreasonable delay, and no later than 72 hours after we discover
+            a security incident affecting your data, and we will cooperate with you on any notices the law requires.
           </p>
 
           <h3>14. AI-generated content</h3>
@@ -148,7 +161,8 @@ export default function TermsPage() {
           <h3>19. Governing law</h3>
           <p>
             These Terms are governed by the laws of the State of {site.legalState}, without regard to its conflict-of-laws
-            rules. Disputes will be resolved in the state or federal courts located in {site.legalState}.
+            rules. Disputes will be resolved in the state or federal courts located in San Francisco County,
+            California.
           </p>
 
           <h3>20. Changes</h3>

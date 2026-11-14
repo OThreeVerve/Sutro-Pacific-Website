@@ -24,7 +24,7 @@ export default function SmsProgramPage() {
           <h2>Program overview</h2>
           <p>
             The {site.programName} is an operational text messaging program run by {site.brand}, a service of{" "}
-            {site.legalName}. Property management companies (&quot;client companies&quot;) use {site.brand} to coordinate
+            {site.legalName}. Messages are written and sent by automated software. Property management companies (&quot;client companies&quot;) use {site.brand} to coordinate
             work with their own staff and vendors. Each message identifies the agent (for example, &quot;Sutro&quot;) and the
             client company it is sending for (for example, &quot;the team assistant for Strive Inc.&quot;).
           </p>
@@ -39,7 +39,8 @@ export default function SmsProgramPage() {
             <li>
               <strong>Step 1. The employer confirms consent.</strong> An administrator at the client company adds the team
               member or vendor in the {site.brand} dashboard and confirms that the person has agreed to receive
-              operational text messages from the program.
+              operational text messages from the program. For a personal mobile number, the person&apos;s own YES reply in
+              Step 3 is what opts them in.
             </li>
             <li>
               <strong>Step 2. A welcome text explains the program.</strong> The person receives one welcome message that names
@@ -62,7 +63,7 @@ export default function SmsProgramPage() {
             Message frequency varies with the amount of work assigned to you, typically a few messages per assigned task.
             Routine messages are sent only during your scheduled work hours and never before 8:00 AM or after 8:00 PM in
             your local time. People who have separately agreed to be emergency contacts may receive messages at other times
-            about urgent issues such as active leaks.
+            about urgent issues such as active leaks. Replies to messages you send us may arrive outside these hours.
           </p>
 
           <h2>Message and data rates</h2>
