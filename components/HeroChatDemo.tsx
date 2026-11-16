@@ -109,7 +109,7 @@ export function HeroChatDemo() {
             key={t}
             type="button"
             onClick={() => show(t)}
-            aria-label={`Show ${THREADS[t].name}'s conversation`}
+            aria-label={`Show ${THREADS[t].name}’s conversation`}
             aria-pressed={focus === t}
             className={`h-2 rounded-full transition-all duration-300 ${focus === t ? "w-6 bg-pacific-600" : "w-2 bg-slate-300"}`}
           />

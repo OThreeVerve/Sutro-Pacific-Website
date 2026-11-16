@@ -24,9 +24,9 @@ export default function SmsProgramPage() {
           <h2>Program overview</h2>
           <p>
             The {site.programName} is an operational text messaging program run by {site.brand}, a service of{" "}
-            {site.legalName}. Messages are written and sent by automated software. Property management companies (&quot;client companies&quot;) use {site.brand} to coordinate
-            work with their own staff and vendors. Each message identifies the agent (for example, &quot;Sutro&quot;) and the
-            client company it is sending for (for example, &quot;the team assistant for Strive Inc.&quot;).
+            {site.legalName}. Messages are written and sent by automated software. Property management companies (“client companies”) use {site.brand} to coordinate
+            work with their own staff and vendors. Each message identifies the agent (for example, “Sutro”) and the
+            client company it is sending for (for example, “the team assistant for Strive Inc.”).
           </p>
           <ul>
             <li><strong>Who receives messages:</strong> employees and vendors of client companies who have agreed to receive operational texts about their work.</li>
@@ -39,7 +39,7 @@ export default function SmsProgramPage() {
             <li>
               <strong>Step 1. The employer confirms consent.</strong> An administrator at the client company adds the team
               member or vendor in the {site.brand} dashboard and confirms that the person has agreed to receive
-              operational text messages from the program. For a personal mobile number, the person&apos;s own YES reply in
+              operational text messages from the program. For a personal mobile number, the person’s own YES reply in
               Step 3 is what opts them in.
             </li>
             <li>
@@ -63,8 +63,8 @@ export default function SmsProgramPage() {
             Message frequency varies with the amount of work assigned to you, typically a few messages per assigned task.
             Routine messages are sent only during your scheduled work hours and never before 8:00 AM or after 8:00 PM in
             your local time. People who have separately agreed to be emergency contacts may receive messages at other times
-            about urgent issues such as active leaks. If you text us outside your work hours, you&apos;ll get one short
-            acknowledgment, and we&apos;ll follow up during your work hours. Emergency contacts may get replies at any time.
+            about urgent issues such as active leaks. If you text us outside your work hours, you’ll get one short
+            acknowledgment, and we’ll follow up during your work hours. Emergency contacts may get replies at any time.
           </p>
 
           <h2>Message and data rates</h2>
@@ -100,7 +100,7 @@ export default function SmsProgramPage() {
           <p className="text-sm font-semibold text-slate-600">What opting in looks like</p>
           <PhoneMockup title="Sutro · Strive Inc." messages={optInConversation} />
           <p className="text-xs text-slate-500">
-            Example only. &quot;Strive Inc.&quot; and the people shown are fictional. Real messages name the client company
+            Example only. “Strive Inc.” and the people shown are fictional. Real messages name the client company
             you work with.
           </p>
         </aside>

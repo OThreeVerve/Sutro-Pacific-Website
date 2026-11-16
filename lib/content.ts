@@ -12,28 +12,28 @@ export type ScriptStep = {
 export const heroScript: ScriptStep[] = [
   { thread: "alex", from: "agent", text: "Hi Alex, urgent work order at The Grove, Unit 5: kitchen sink leaking under the cabinet. Can you head over now?" },
   { thread: "alex", from: "person", text: "On my way" },
-  { thread: "alex", from: "agent", text: "Thanks! Send a photo when you're there." },
+  { thread: "alex", from: "agent", text: "Thanks! Send a photo when you’re there." },
   { thread: "alex", from: "person", text: "Leak stopped. Need a part that might be expensive, somewhere around $200. Can you check with Samantha first?", photo: "/demo/leak.jpg" },
-  { thread: "alex", from: "agent", text: "Let me get her approval and I'll get back to you here shortly." },
+  { thread: "alex", from: "agent", text: "Let me get her approval and I’ll get back to you here shortly." },
   { thread: "samantha", from: "agent", text: "Alex is on-site at The Grove, Unit 5 and is requesting a $200 charge to fix an emergency plumbing leak. Reply APPROVE or DENY." },
   { thread: "samantha", from: "person", text: "APPROVE" },
-  { thread: "samantha", from: "agent", text: "Thanks Samantha, I'll let Alex know." },
-  { thread: "alex", from: "agent", text: "You have Samantha's approval for the $200 part. Go ahead, and check in with me once the work is done." },
+  { thread: "samantha", from: "agent", text: "Thanks Samantha, I’ll let Alex know." },
+  { thread: "alex", from: "agent", text: "You have Samantha’s approval for the $200 part. Go ahead, and check in with me once the work is done." },
   { thread: "alex", from: "person", text: "All fixed", photo: "/demo/fixed.jpg" },
   { thread: "alex", from: "agent", text: "Great work. Sent to Samantha to close out." },
-  { thread: "samantha", from: "agent", text: "The Grove Unit 5 leak is fixed. Photos are attached and it's ready for you to close out." },
+  { thread: "samantha", from: "agent", text: "The Grove Unit 5 leak is fixed. Photos are attached and it’s ready for you to close out." },
 ];
 
 // Opt-in flow shown on the SMS Program page (fictional company and people).
 export const optInConversation: Bubble[] = [
   {
     from: "agent",
-    text: "Hi Alex, this is Sutro, the team assistant for Strive Inc. I'll text you about work orders during your work hours. Msg frequency varies. Msg & data rates may apply. Reply YES to opt in, HELP for help, STOP to opt out.",
+    text: "Hi Alex, this is Sutro, the team assistant for Strive Inc. I’ll text you about work orders during your work hours. Msg frequency varies. Msg & data rates may apply. Reply YES to opt in, HELP for help, STOP to opt out.",
   },
   { from: "person", text: "YES" },
   {
     from: "agent",
-    text: "Thanks Alex, you're all set. I'll text you about work orders during your work hours. Tip: on more than one job, start with the property and unit, like 'Grove 4 done'. Reply STOP anytime to opt out.",
+    text: "Thanks Alex, you’re all set. I’ll text you about work orders during your work hours. Tip: on more than one job, start with the property and unit, like ‘Grove 4 done’. Reply STOP anytime to opt out.",
   },
 ];
 

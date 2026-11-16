@@ -2,9 +2,9 @@ import { Container } from "./Container";
 import { completionStats as s } from "@/lib/content";
 
 const points = [
-  { title: "Dispatched the moment it's created", body: "The right tech gets the job by text right away, with photos and details." },
-  { title: "Follow-ups that never wait", body: "Sutro checks in at every step, during each person's work hours, until the job is closed." },
-  { title: "Approvals in one reply", body: "Spending approvals go to the owner by text, so parts aren't held up for days." },
+  { title: "Dispatched the moment it’s created", body: "The right tech gets the job by text right away, with photos and details." },
+  { title: "Follow-ups that never wait", body: "Sutro checks in at every step, during each person’s work hours, until the job is closed." },
+  { title: "Approvals in one reply", body: "Spending approvals go to the owner by text, so parts aren’t held up for days." },
 ];
 
 export function CompletionStats() {
@@ -20,7 +20,7 @@ export function CompletionStats() {
             <p className="text-sm font-semibold uppercase tracking-wider text-pacific-600">Work order completion</p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">From days to hours.</h2>
             <p className="mt-4 text-lg text-slate-600">
-              The average work order takes {s.benchmarkHours} hours ({s.benchmarkDays} days) from the moment it&apos;s
+              The average work order takes {s.benchmarkHours} hours ({s.benchmarkDays} days) from the moment it’s
               created to the moment the repair is done.{" "}
               {s.sutroMeasured
                 ? `Teams working with Sutro Pacific average ${s.sutroHours} hours.`

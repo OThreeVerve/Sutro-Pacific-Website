@@ -16,8 +16,8 @@ export default function TermsPage() {
       <Container className="max-w-3xl py-14">
         <div className="prose-legal">
           <p>
-            These Terms &amp; Conditions are provided by {site.legalName}, doing business as {site.brand} (&quot;
-            {site.brand},&quot; &quot;we,&quot; &quot;us&quot;). Part A applies to anyone who receives text messages from
+            These Terms &amp; Conditions are provided by {site.legalName}, doing business as {site.brand} (“
+            {site.brand},” “we,” “us”). Part A applies to anyone who receives text messages from
             our program. Part B applies to companies that subscribe to the Service.
           </p>
 
@@ -26,7 +26,7 @@ export default function TermsPage() {
           <h3>1. Program description</h3>
           <p>
             The {site.programName} sends operational text messages to employees and vendors of property management
-            companies that use {site.brand} (&quot;client companies&quot;). Messages are about assigned work, such as work
+            companies that use {site.brand} (“client companies”). Messages are about assigned work, such as work
             orders and unit turns: new requests, status check-ins, requests for photos, approvals and completion notices.
             The program is not used for marketing.
           </p>
@@ -43,7 +43,7 @@ export default function TermsPage() {
             Message frequency varies based on the work assigned to you. Message and data rates may apply. Routine messages
             are sent only during your scheduled work hours and never before 8:00 AM or after 8:00 PM local time, except
             urgent messages to people who have agreed to be emergency contacts. If you text us outside your work hours,
-            you&apos;ll get one short acknowledgment, and we&apos;ll follow up during your work hours. Emergency contacts may
+            you’ll get one short acknowledgment, and we’ll follow up during your work hours. Emergency contacts may
             get replies at any time.
           </p>
 
@@ -79,14 +79,14 @@ export default function TermsPage() {
 
           <h3>9. The Service</h3>
           <p>
-            {site.brand} provides software, including AI agents, that coordinates tasks with a client company&apos;s team by
+            {site.brand} provides software, including AI agents, that coordinates tasks with a client company’s team by
             text message and records progress in a dashboard. We may improve or change the Service over time. Some agents
             may be in development or offered as previews.
           </p>
 
           <h3>10. Accounts</h3>
           <p>
-            You are responsible for your administrators&apos; activity and for keeping login credentials secure. Information
+            You are responsible for your administrators’ activity and for keeping login credentials secure. Information
             you provide must be accurate, including business details used to register your messaging numbers with carriers.
           </p>
 
@@ -94,7 +94,7 @@ export default function TermsPage() {
           <ul>
             <li>Add only team members and vendors who have agreed to receive operational text messages, and keep their contact details and work schedules accurate. You represent that each person you add gave you permission to share their mobile number for work texts, and you will tell us promptly if that permission ends.</li>
             <li>Do not make consent a condition of employment, and coordinate another way with anyone who opts out.</li>
-            <li>You set each person&apos;s work schedule and emergency contact status in the dashboard. You are responsible for when your team members receive texts and for any wages owed for time they spend reading or responding to them.</li>
+            <li>You set each person’s work schedule and emergency contact status in the dashboard. You are responsible for when your team members receive texts and for any wages owed for time they spend reading or responding to them.</li>
             <li>Do not use the Service to message residents, prospects or the public, or to send marketing.</li>
             <li>Set spending limits, approvers and other policies in the dashboard. The agents follow these settings; they do not make spending or business decisions for you.</li>
             <li>Comply with laws that apply to your business, including employment, privacy and fair housing laws, and give your team members any notice those laws require about the information you share with us.</li>
@@ -105,7 +105,7 @@ export default function TermsPage() {
           <p>
             Subscription fees are $100 per month plus $4 per unit under management, unless your order form says otherwise.
             Units are counted on the billing date. Fees are billed monthly in advance and are non-refundable except where
-            required by law. We may change fees with at least 30 days&apos; notice.
+            required by law. We may change fees with at least 30 days’ notice.
           </p>
 
           <h3>13. Your data</h3>
@@ -135,12 +135,12 @@ export default function TermsPage() {
           <h3>15. Acceptable use</h3>
           <p>
             Do not use the Service to send unlawful, harassing, deceptive or unsolicited messages; to interfere with the
-            Service; or to access other customers&apos; data. We may suspend use that violates these Terms or carrier rules.
+            Service; or to access other customers’ data. We may suspend use that violates these Terms or carrier rules.
           </p>
 
           <h3>16. Disclaimers</h3>
           <p>
-            The Service is provided &quot;as is&quot; and &quot;as available.&quot; To the extent permitted by law, we disclaim
+            The Service is provided “as is” and “as available.” To the extent permitted by law, we disclaim
             implied warranties of merchantability, fitness for a particular purpose and non-infringement. We do not guarantee
             that messages will be delivered or that the Service will be uninterrupted. Do not rely on the Service as your
             only means of handling emergencies; call emergency services when anyone may be in danger.

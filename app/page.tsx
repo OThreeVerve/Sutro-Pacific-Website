@@ -9,14 +9,14 @@ import { pricing, site } from "@/lib/site";
 const steps = [
   { n: "1", title: "Start a mission", body: "Create a work order or unit turn in the dashboard in under a minute." },
   { n: "2", title: "The agent texts your team", body: "The right maintenance tech, leasing agent or vendor gets a clear request by text. No app to install." },
-  { n: "3", title: "It follows up, so you don't have to", body: "Check-ins, photos, spending approvals and reminders, only during each person's work hours." },
+  { n: "3", title: "It follows up, so you don’t have to", body: "Check-ins, photos, spending approvals and reminders, only during each person’s work hours." },
   { n: "4", title: "You get the full picture", body: "A timeline of every step and an email report when the mission closes." },
 ];
 
 const principles = [
   { title: "Only people who opt in", body: "Team members and vendors confirm by text before the agent ever messages them, and can reply STOP at any time." },
-  { title: "Only during work hours", body: "Routine texts arrive only inside each person's schedule. Only true emergencies go out after hours, and only to people who agreed." },
-  { title: "Residents are never texted", body: "The agents coordinate your team. Your residents' contact information is never used to message them." },
+  { title: "Only during work hours", body: "Routine texts arrive only inside each person’s schedule. Only true emergencies go out after hours, and only to people who agreed." },
+  { title: "Residents are never texted", body: "The agents coordinate your team. Your residents’ contact information is never used to message them." },
   { title: "You keep the decisions", body: "Spending limits and approvals come from your settings. The agent asks; you decide." },
 ];
 
@@ -32,8 +32,8 @@ export default function Home() {
               Tighter operations, less chasing.
             </h1>
             <p className="mt-5 text-lg text-slate-600">
-              Sutro Pacific&apos;s AI agents bring consistency and accountability to your daily operations. They follow up
-              with your team, keep tasks moving, and give you a clearer picture of what&apos;s getting done and what needs
+              Sutro Pacific’s AI agents bring consistency and accountability to your daily operations. They follow up
+              with your team, keep tasks moving, and give you a clearer picture of what’s getting done and what needs
               attention.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -56,11 +56,11 @@ export default function Home() {
       <section>
         <Container className="py-16">
           <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">
-            Small teams don&apos;t lack effort. They lack someone keeping the tempo.
+            Small teams don’t lack effort. They lack someone keeping the tempo.
           </h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              { t: "Visibility", b: "Know which work orders, turns and follow-ups are open, who owns them and what's blocking them, without chasing anyone." },
+              { t: "Visibility", b: "Know which work orders, turns and follow-ups are open, who owns them and what’s blocking them, without chasing anyone." },
               { t: "Tempo", b: "Multi-step jobs stall between handoffs. The agent keeps every step moving, so vacant days and repeat calls go down." },
               { t: "Accountability", b: "Every request, reply, photo and approval is logged in one timeline, so nothing depends on memory." },
             ].map((c) => (
@@ -96,7 +96,7 @@ export default function Home() {
         <Container className="py-16">
           <h2 className="text-3xl font-semibold tracking-tight">Meet the agents</h2>
           <p className="mt-3 max-w-2xl text-slate-600">
-            Each agent runs missions from proven playbooks and texts from its own number, so your team always knows who&apos;s asking.
+            Each agent runs missions from proven playbooks and texts from its own number, so your team always knows who’s asking.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {agents.map((a) => (

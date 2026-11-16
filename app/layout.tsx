@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 const description =
-  "Sutro Pacific's AI agents bring consistency and accountability to your daily operations. They follow up with your team, keep tasks moving, and give you a clearer picture of what's getting done and what needs attention.";
+  "Sutro Pacific’s AI agents bring consistency and accountability to your daily operations. They follow up with your team, keep tasks moving, and give you a clearer picture of what’s getting done and what needs attention.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
