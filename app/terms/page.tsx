@@ -150,7 +150,9 @@ export default function TermsPage() {
           <p>
             To the extent permitted by law, neither party is liable for indirect, incidental, special, consequential or
             punitive damages, or lost profits, and our total liability for any claim is limited to the fees you paid us in
-            the 12 months before the claim arose.
+            the 12 months before the claim arose. The exclusion of indirect, incidental, special, consequential and punitive
+            damages and lost profits in this section does not apply to amounts a party owes under its defense and indemnity
+            obligations for third-party claims.
           </p>
 
           <h3>18. Term and termination</h3>
